@@ -9,4 +9,12 @@ class Vendor
     @inventory = {}
   end
 
+def check_stock(something)
+  @inventory[:key] = 0
+end
+
+def stock(fruit, quantity)
+  @inventory [:key] = '30'
+end
+
 end
