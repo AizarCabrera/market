@@ -21,7 +21,7 @@ class MarketTest < Minitest::Test
     assert_equal [], market.vendors
   end
 
-  def test_it_can_have_vendors
+  def test_it_can_have_vendors_and_their_names
     market = Market.new("South Pearl Street Farmers Market")
      vendor_1 = Vendor.new("Rocky Mountain Fresh")
       vendor_2 = Vendor.new("Ba-Nom-a-Nom")
@@ -29,8 +29,13 @@ class MarketTest < Minitest::Test
 
         market.add_vendor(vendor_1)
         market.add_vendor(vendor_2)
-      market.add_vendor(vendor_3)
-     expected = [vendor_1, vendor_2, vendor_3]
-    assert_equal expected, market.vendors
+       market.add_vendor(vendor_3)
+      expected = [vendor_1, vendor_2, vendor_3]
+      expected_2 =["Rocky Mountain Fresh", "Ba-Nom-a-Nom", "Palisade Peach Shack"]
+     assert_equal expected, market.vendors
+    assert_equal expected_2, market.vendor_names
   end
+
+
+
 end
