@@ -23,8 +23,9 @@ class VendorTest < Minitest::Test
   def test_it_can_check_stock_starting_at_0_and_add_more
   vendor = Vendor.new("Rocky Mountain Fresh")
 
-  assert_equal 30, vendor.stock("Peaches",30).to_i
-  assert_equal 55, vendor.stock("Peaches",25).to_i
+  assert_equal 30, vendor.stock("Peaches",30)
+  assert_equal 55, vendor.stock("Peaches",25)
+  assert_equal 67, vendor.stock("Tomatoes", 12)
   assert_equal 0, vendor.check_stock("Peaches")
   end
 
