@@ -24,6 +24,7 @@ class VendorTest < Minitest::Test
   vendor = Vendor.new("Rocky Mountain Fresh")
 
   assert_equal 30, vendor.stock("Peaches",30).to_i
+  assert_equal 55, vendor.stock("Peaches",25).to_i
   assert_equal 0, vendor.check_stock("Peaches")
   end
 
