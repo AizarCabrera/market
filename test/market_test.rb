@@ -17,21 +17,11 @@ class MarketTest < Minitest::Test
   end
 
 
+  def test_it_returns_empty_array_for_vendors
+  market = Market.new("South Pearl Street Farmers Market")
+  assert_equal [], market.vendors
+  end
 
-# pry(main)> market.name
-#=> "South Pearl Street Farmers Market"
 
-  # def test_it_can_return_an_empty_hash_for_inventory
-  # vendor = Vendor.new("Rocky Mountain Fresh")
-  # assert_instance_of Hash, vendor.inventory
-  # end
-  #
-  # def test_it_can_check_stock_starting_at_0_and_add_more
-  # vendor = Vendor.new("Rocky Mountain Fresh")
-  #
-  # assert_equal 30, vendor.stock("Peaches",30).to_i
-  # assert_equal 55, vendor.stock("Peaches",25).to_i
-  # assert_equal 0, vendor.check_stock("Peaches")
-  # end
 
 end

@@ -1,11 +1,11 @@
 require 'pry'
 
 class Market
-  attr_reader :name #:inventory
+  attr_reader :name, :vendors
   #
   def initialize(name)
     @name      = name
-    # @inventory = Hash.new(0)
+    @vendors   = []
   end
   #
   # def check_stock(fruit)
